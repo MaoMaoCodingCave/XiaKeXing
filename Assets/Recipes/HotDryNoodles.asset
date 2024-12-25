@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b700658bb903db4eb6ab7150aa0e843, type: 3}
   m_Name: HotDryNoodles
   m_EditorClassIdentifier: 
-  recipeName: HotDryNoodles
+  recipeName: "\u70ED\u5E72\u9762"
   ingredients:
-  - ingredientName: Noodles
+  - ingredientName: "\u9762\u6761"
     quantityRequired: 1
-  - ingredientName: Sauce
+  - ingredientName: "\u9171\u6599"
     quantityRequired: 1
-  - ingredientName: Peanut
+  - ingredientName: "\u82B1\u751F"
     quantityRequired: 3
-  - ingredientName: Salt
+  - ingredientName: "\u76D0"
     quantityRequired: 2
-  cookedItemName: HotDryNoodles
+  cookedItemName: "\u70ED\u5E72\u9762"

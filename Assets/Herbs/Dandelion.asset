@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b700658bb903db4eb6ab7150aa0e843, type: 3}
-  m_Name: RoastPotato
+  m_Script: {fileID: 11500000, guid: ed7422145c7d3d5428fd68f4ca667126, type: 3}
+  m_Name: Dandelion
   m_EditorClassIdentifier: 
-  recipeName: "\u70E4\u7EA2\u85AF"
-  ingredients: []
-  cookedItemName: 
+  herbName: "\u84B2\u516C\u82F1"
+  herbRegion: "\u4E2D\u539F"
+  herbType: "\u690D\u7269"
+  herbDescription: lalaland
