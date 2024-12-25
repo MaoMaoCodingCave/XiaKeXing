@@ -7,12 +7,15 @@ public class InventoryManager : MonoBehaviour
 {
     public Dictionary<string, int> inventory = new Dictionary<string, int>()
     {
-        {"Noodles", 5},
-        {"Sauce", 2},
-        {"Meat", 3},
-        {"Cheese", 1},
-        {"Salt", 4},
-        {"Peanut", 3},
-        {"Pepper", 5},
+        {"面条", 5},
+        {"酱料", 2},
+        {"肉", 3},
+        {"起司", 1},
+        {"盐", 4},
+        {"花生", 3},
+        {"辣椒", 5},
+        {"苹果", 3},
+        {"桃子", 2},
+        {"红薯", 4}
     };
 }

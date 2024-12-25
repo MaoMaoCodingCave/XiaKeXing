@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UI;
@@ -9,6 +10,9 @@ public class CookingManager : MonoBehaviour
     public GameObject cookingPage;
     public InventoryManager inventoryManager;
     public Recipe recipe;
+    public List<Recipe> recipeList;
+    public GameObject recipeBtn;
+    public Canvas recipeCanvas;
     public Text recipeNameText;
     public List<Text> ingredientsTexts;
     public List<Text> ingredientsQuantityTexts;
@@ -20,6 +24,20 @@ public class CookingManager : MonoBehaviour
     void Start()
     {
         cookingPage.SetActive(false);
+        recipeNameText.text = recipe.recipeName;
+        UpdateRecipe();
+        for (int i = 0; i < recipeList.Count; i++)
+        {
+            GameObject recipeButton = Instantiate(recipeBtn, recipeCanvas.transform);
+            recipeButton.GetComponentInChildren<Text>().text = recipeList[i].recipeName;
+            Recipe recipe = recipeList[i];
+            recipeButton.GetComponent<Button>().onClick.AddListener(delegate { OnRecipeButtonClicked(recipe); });
+        }
+    }
+
+    private void OnRecipeButtonClicked(Recipe recipe)
+    {
+        this.recipe = recipe;
         recipeNameText.text = recipe.recipeName;
         UpdateRecipe();
     }
@@ -71,6 +89,7 @@ public class CookingManager : MonoBehaviour
                 inventoryManager.inventory[recipe.cookedItemName] = 1;
             }
             UpdateRecipe();
+            // TODO: 烹饪成功后背包逻辑的处理
             Debug.Log("烹饪" + recipe.cookedItemName + "成功");
         }
         else
