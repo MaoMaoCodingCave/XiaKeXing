@@ -16,9 +16,10 @@ public class PlayerMove : MonoBehaviour
     {
         // 获取水平和垂直输入 (WASD 或方向键)
         float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
 
         // 将输入转换为移动向量
-        movement = new Vector2(moveX, 0f).normalized;
+        movement = new Vector2(moveX, moveY).normalized;
 
         // 翻转角色朝向
         if (moveX > 0 && !facingRight)

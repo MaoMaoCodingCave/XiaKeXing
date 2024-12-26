@@ -48,14 +48,15 @@ public class CookingManager : MonoBehaviour
     void Update()
     {
         // 按下 C 键打开或关闭烹饪页面
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            cookingPage.SetActive(!cookingPage.activeSelf);
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            cookingPage.SetActive(false);
-        }
+        // 新的逻辑放到了 Pot.cs 中
+        // if (Input.GetKeyDown(KeyCode.C))
+        // {
+        //     cookingPage.SetActive(!cookingPage.activeSelf);
+        // }
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        // {
+        //     cookingPage.SetActive(false);
+        // }
     }
 
     /// <summary>

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HarvestManager : MonoBehaviour
 {
+    public Canvas harvestPage;
     public Canvas harvestCanvas;
     public Canvas existingItemCanvas;
     public List<Herb> herbList;
@@ -13,11 +14,13 @@ public class HarvestManager : MonoBehaviour
     private int collectedCount = 0;
     public Button startButton;
     public Button stopButton;
+    public Button cancelButton;
     // Start is called before the first frame update
     void Start()
     {
         startButton.onClick.AddListener(StartHarvesting);
         stopButton.onClick.AddListener(StopHarvesting);
+        cancelButton.onClick.AddListener(CancelHarvesting);
         stopButton.interactable = false;
         foreach (Herb herb in herbList)
         {
@@ -26,6 +29,13 @@ public class HarvestManager : MonoBehaviour
             // 把字体颜色改为红色
             herbText.GetComponent<Text>().color = Color.red;
         }
+    }
+
+    // 停止采集并且关闭采集页面
+    private void CancelHarvesting()
+    {
+        isHarvesting = false;
+        harvestPage.gameObject.SetActive(false);
     }
 
     void StartHarvesting()
