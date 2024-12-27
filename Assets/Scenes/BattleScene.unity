@@ -4224,6 +4224,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &488531985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488531986}
+  m_Layer: 0
+  m_Name: TurnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &488531986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488531985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &490772194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6163,6 +6194,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5af62ce803a1264eb2b254b1e32d99c, type: 3}
+--- !u!1 &726352669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726352670}
+  m_Layer: 0
+  m_Name: EventHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &726352670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726352669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &731909132 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6919327380465941550, guid: a5af62ce803a1264eb2b254b1e32d99c, type: 3}
@@ -8537,6 +8599,7 @@ MonoBehaviour:
   - {fileID: 2075957904}
   - {fileID: 570637927}
   - {fileID: 232697563}
+  selectedUnit: {fileID: 0}
 --- !u!4 &930678906
 Transform:
   m_ObjectHideFlags: 0
@@ -18490,28 +18553,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2091993139}
-  - component: {fileID: 2091993138}
   - component: {fileID: 2091993140}
+  - component: {fileID: 2091993141}
   m_Layer: 3
   m_Name: Player01
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2091993138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091993137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb4c5b5094edf9a47b4690a5a85a4401, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementRange: 3
 --- !u!4 &2091993139
 Transform:
   m_ObjectHideFlags: 0
@@ -18520,7 +18570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091993137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18554,6 +18604,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8684665, y: 0.7863073}
   m_EdgeRadius: 0
+--- !u!114 &2091993141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091993137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4c5b5094edf9a47b4690a5a85a4401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementRange: 5
+  hasMoved: 0
 --- !u!4 &2114009900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6919327380465941550, guid: a5af62ce803a1264eb2b254b1e32d99c, type: 3}

@@ -10,6 +10,7 @@ public class Tile : MonoBehaviour
     public LayerMask obstacleLayer;
     // [SerializeField] private Sprite[] tileSprites;
     public bool isWalkable;
+    public bool inRange;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +62,7 @@ public class Tile : MonoBehaviour
     /// </summary>
     void OnMouseDown()
     {
-        if (isWalkable && BattleManager.instance.selectedUnit != null && !BattleManager.instance.selectedUnit.hasMoved)
+        if (isWalkable && BattleManager.instance.selectedUnit != null && !BattleManager.instance.selectedUnit.hasMoved && inRange)
         {
             // Debug.Log("Tile: " + transform.position);
             BattleManager.instance.selectedUnit.Move(transform);

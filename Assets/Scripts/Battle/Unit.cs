@@ -7,7 +7,7 @@ public class Unit : MonoBehaviour
 {
     [SerializeField] private int movementRange = 3;
     private float speed = 3f;
-    private float timer = 5f;
+    // private float timer = 5f;
     public bool hasMoved = false;
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -35,16 +35,16 @@ public class Unit : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (hasMoved)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                hasMoved = false;
-                ShowWalkableTiles();
-                timer = 5f;
-            }
-        }
+        // if (hasMoved)
+        // {
+        //     timer -= Time.deltaTime;
+        //     if (timer <= 0)
+        //     {
+        //         hasMoved = false;
+        //         ShowWalkableTiles();
+        //         timer = 5f;
+        //     }
+        // }
     }
 
     private void ShowWalkableTiles()
@@ -61,12 +61,17 @@ public class Unit : MonoBehaviour
         {
             float distanceX = Mathf.Abs(transform.position.x - BattleManager.instance.tiles[i].transform.position.x);
             float distanceY = Mathf.Abs(transform.position.y - BattleManager.instance.tiles[i].transform.position.y);
+            // Debug.Log("distanceX: " + distanceX + " distanceY: " + distanceY);
             if (distanceX + distanceY <= movementRange)
             {
+                // Debug.Log(BattleManager.instance.tiles[i] + "in range");
                 if (BattleManager.instance.tiles[i].GetComponent<Tile>().isWalkable)
                 {
                     BattleManager.instance.tiles[i].GetComponent<SpriteRenderer>().color = Color.green;
+                    BattleManager.instance.tiles[i].GetComponent<Tile>().inRange = true;
                 }
+                // BattleManager.instance.tiles[i].GetComponent<SpriteRenderer>().color = Color.green;
+                // BattleManager.instance.tiles[i].GetComponent<Tile>().inRange = true;
             }
         }
     }
@@ -111,6 +116,7 @@ public class Unit : MonoBehaviour
             Color color = Color.white;
             color.a = 100f / 255f;
             BattleManager.instance.tiles[i].GetComponent<SpriteRenderer>().color = color;
+            BattleManager.instance.tiles[i].GetComponent<Tile>().inRange = false;
         }
     }
 }
