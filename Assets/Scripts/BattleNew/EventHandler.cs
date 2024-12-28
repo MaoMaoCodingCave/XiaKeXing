@@ -10,4 +10,10 @@ public class EventHandler
     {
         OnMovePlayer?.Invoke(tilePosition);
     }
+
+    public static event Action<Vector3> OnDigTile;
+    public static void CallOnDigTile(Vector3 tilePosition)
+    {
+        OnDigTile?.Invoke(tilePosition);
+    }
 }
