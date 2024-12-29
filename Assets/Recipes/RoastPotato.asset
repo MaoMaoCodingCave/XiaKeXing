@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b700658bb903db4eb6ab7150aa0e843, type: 3}
   m_Name: RoastPotato
   m_EditorClassIdentifier: 
+  recipeImageSprite: {fileID: 21300000, guid: 24319fffd8149b349b045648a9bc53ee, type: 3}
   recipeName: "\u70E4\u7EA2\u85AF"
   ingredients:
-  - ingredientName: "\u7EA2\u85AF"
+  - ingredientImageSprite: {fileID: 21300000, guid: 5006ce3ddde7a3a49921659fdbeede29, type: 3}
+    ingredientName: "\u7EA2\u85AF"
     quantityRequired: 1
   cookedItemName: "\u70E4\u7EA2\u85AF"

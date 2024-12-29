@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -111,7 +113,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -225,6 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -238,7 +242,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -352,6 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -365,7 +371,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -479,6 +485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -492,7 +500,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -606,6 +614,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -619,7 +629,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -733,6 +743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -746,7 +758,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -860,6 +872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -873,7 +887,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1045,6 +1059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1058,7 +1074,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1172,6 +1188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1185,7 +1203,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1299,6 +1317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1312,7 +1332,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1426,6 +1446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1439,7 +1461,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1553,6 +1575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1566,7 +1590,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1680,6 +1704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1693,7 +1719,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1807,6 +1833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1820,7 +1848,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1934,6 +1962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1947,7 +1977,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2061,6 +2091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2074,7 +2106,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2188,6 +2220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2201,7 +2235,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2315,6 +2349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2328,7 +2364,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2442,6 +2478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2455,7 +2493,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2569,6 +2607,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2582,7 +2622,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2696,6 +2736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2709,7 +2751,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2823,6 +2865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2836,7 +2880,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2950,6 +2994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2963,7 +3009,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3077,6 +3123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3090,7 +3138,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3204,6 +3252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3217,7 +3267,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3331,6 +3381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3344,7 +3396,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3458,6 +3510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458eb7b1e81a9844483abff2011b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWalk: 0
+  inRange: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3471,7 +3525,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

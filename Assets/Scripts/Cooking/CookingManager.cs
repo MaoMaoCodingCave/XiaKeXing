@@ -13,9 +13,11 @@ public class CookingManager : MonoBehaviour
     public List<Recipe> recipeList;
     public GameObject recipeBtn;
     public Canvas recipeCanvas;
+    public Image recipeImage;
     public Text recipeNameText;
     public List<Text> ingredientsTexts;
     public List<Text> ingredientsQuantityTexts;
+    public List<Image> ingredientsImages;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -39,6 +41,7 @@ public class CookingManager : MonoBehaviour
     {
         this.recipe = recipe;
         recipeNameText.text = recipe.recipeName;
+        recipeImage.sprite = recipe.recipeImageSprite;
         UpdateRecipe();
     }
 
@@ -117,12 +120,14 @@ public class CookingManager : MonoBehaviour
         {
             ingredientsTexts[i].enabled = false;
             ingredientsQuantityTexts[i].enabled = false;
+            ingredientsImages[i].enabled = false;
         }
         // 只显示所需的食材文本和数量文本
         for (int i = 0; i < recipe.ingredients.Count; i++)
         {
             ingredientsTexts[i].enabled = true;
             ingredientsQuantityTexts[i].enabled = true;
+            ingredientsImages[i].enabled = true;
         }
         // 更新食谱的食材文本和数量文本
         for (int i = 0; i < recipe.ingredients.Count; i++)
@@ -132,6 +137,7 @@ public class CookingManager : MonoBehaviour
             if (inventoryManager.inventory.ContainsKey(recipe.ingredients[i].ingredientName))
             {
                 ingredientsTexts[i].text = recipe.ingredients[i].ingredientName;
+                ingredientsImages[i].sprite = recipe.ingredients[i].ingredientImageSprite;
                 ingredientsQuantityTexts[i].text = inventoryManager.inventory[recipe.ingredients[i].ingredientName].ToString() + '/' + recipe.ingredients[i].quantityRequired.ToString();
                 // 如果食材数量足够，将数量文本颜色设置为绿色，否则设置为红色
                 if (inventoryManager.inventory[recipe.ingredients[i].ingredientName] >= recipe.ingredients[i].quantityRequired)
