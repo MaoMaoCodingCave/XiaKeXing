@@ -7,5 +7,4 @@ public class CommonItem : ScriptableObject
 {
     public Sprite itemImageSprite;
     public string itemName;
-    public int itemAmount;
 }

@@ -15,7 +15,6 @@ MonoBehaviour:
   recipeImageSprite: {fileID: 21300000, guid: 24319fffd8149b349b045648a9bc53ee, type: 3}
   recipeName: "\u70E4\u7EA2\u85AF"
   ingredients:
-  - ingredientImageSprite: {fileID: 21300000, guid: 5006ce3ddde7a3a49921659fdbeede29, type: 3}
-    ingredientName: "\u7EA2\u85AF"
+  - commonItem: {fileID: 11400000, guid: dcec4bea15868264292c4b392a656ea9, type: 2}
     quantityRequired: 1
-  cookedItemName: "\u70E4\u7EA2\u85AF"
+  cookedItem: {fileID: 11400000, guid: 329b8e4f06cc73d4287c7cddb142e12e, type: 2}

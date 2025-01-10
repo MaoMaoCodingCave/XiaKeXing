@@ -9,7 +9,7 @@ public class CookingManager : MonoBehaviour
 {
     public GameObject cookingPage;
     public InventoryManager inventoryManager;
-    public Recipe recipe;
+    private Recipe recipe;
     public List<Recipe> recipeList;
     public GameObject recipeBtn;
     public Canvas recipeCanvas;
@@ -18,6 +18,8 @@ public class CookingManager : MonoBehaviour
     public List<Text> ingredientsTexts;
     public List<Text> ingredientsQuantityTexts;
     public List<Image> ingredientsImages;
+    public List<Image> ingridientsBackgrounds;
+    public Sprite buttonBackgroundSprite;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -26,12 +28,13 @@ public class CookingManager : MonoBehaviour
     void Start()
     {
         cookingPage.SetActive(false);
-        recipeNameText.text = recipe.recipeName;
-        UpdateRecipe();
+        recipeNameText.text = " ";
+        // UpdateRecipe();
         for (int i = 0; i < recipeList.Count; i++)
         {
             GameObject recipeButton = Instantiate(recipeBtn, recipeCanvas.transform);
             recipeButton.GetComponentInChildren<Text>().text = recipeList[i].recipeName;
+            recipeButton.GetComponent<Image>().sprite = buttonBackgroundSprite;
             Recipe recipe = recipeList[i];
             recipeButton.GetComponent<Button>().onClick.AddListener(delegate { OnRecipeButtonClicked(recipe); });
         }
@@ -71,7 +74,7 @@ public class CookingManager : MonoBehaviour
         bool canCook = true;
         for (int i = 0; i < recipe.ingredients.Count; i++)
         {
-            if (!inventoryManager.inventory.ContainsKey(recipe.ingredients[i].ingredientName) || inventoryManager.inventory[recipe.ingredients[i].ingredientName] < recipe.ingredients[i].quantityRequired)
+            if (!inventoryManager.inventory.ContainsKey(recipe.ingredients[i].commonItem) || inventoryManager.inventory[recipe.ingredients[i].commonItem] < recipe.ingredients[i].quantityRequired)
             {
                 canCook = false;
                 break;
@@ -82,19 +85,19 @@ public class CookingManager : MonoBehaviour
         {
             for (int i = 0; i < recipe.ingredients.Count; i++)
             {
-                inventoryManager.inventory[recipe.ingredients[i].ingredientName] -= recipe.ingredients[i].quantityRequired;
+                inventoryManager.inventory[recipe.ingredients[i].commonItem] -= recipe.ingredients[i].quantityRequired;
             }
-            if (inventoryManager.inventory.ContainsKey(recipe.cookedItemName))
+            if (inventoryManager.inventory.ContainsKey(recipe.cookedItem))
             {
-                inventoryManager.inventory[recipe.cookedItemName]++;
+                inventoryManager.inventory[recipe.cookedItem]++;
             }
             else
             {
-                inventoryManager.inventory[recipe.cookedItemName] = 1;
+                inventoryManager.inventory[recipe.cookedItem] = 1;
             }
             UpdateRecipe();
             // TODO: 烹饪成功后背包逻辑的处理
-            Debug.Log("烹饪" + recipe.cookedItemName + "成功");
+            Debug.Log("烹饪" + recipe.cookedItem.itemName + "成功");
         }
         else
         {
@@ -121,6 +124,7 @@ public class CookingManager : MonoBehaviour
             ingredientsTexts[i].enabled = false;
             ingredientsQuantityTexts[i].enabled = false;
             ingredientsImages[i].enabled = false;
+            ingridientsBackgrounds[i].enabled = false;
         }
         // 只显示所需的食材文本和数量文本
         for (int i = 0; i < recipe.ingredients.Count; i++)
@@ -128,19 +132,20 @@ public class CookingManager : MonoBehaviour
             ingredientsTexts[i].enabled = true;
             ingredientsQuantityTexts[i].enabled = true;
             ingredientsImages[i].enabled = true;
+            ingridientsBackgrounds[i].enabled = true;
         }
         // 更新食谱的食材文本和数量文本
         for (int i = 0; i < recipe.ingredients.Count; i++)
         {
             // ingredientsTexts[i].text = recipe.ingredients[i].ingredientName;
             // ingredientsQuantityTexts[i].text = recipe.ingredients[i].quantityRequired.ToString();
-            if (inventoryManager.inventory.ContainsKey(recipe.ingredients[i].ingredientName))
+            if (inventoryManager.inventory.ContainsKey(recipe.ingredients[i].commonItem))
             {
-                ingredientsTexts[i].text = recipe.ingredients[i].ingredientName;
-                ingredientsImages[i].sprite = recipe.ingredients[i].ingredientImageSprite;
-                ingredientsQuantityTexts[i].text = inventoryManager.inventory[recipe.ingredients[i].ingredientName].ToString() + '/' + recipe.ingredients[i].quantityRequired.ToString();
+                ingredientsTexts[i].text = recipe.ingredients[i].commonItem.itemName;
+                ingredientsImages[i].sprite = recipe.ingredients[i].commonItem.itemImageSprite;
+                ingredientsQuantityTexts[i].text = inventoryManager.inventory[recipe.ingredients[i].commonItem].ToString() + '/' + recipe.ingredients[i].quantityRequired.ToString();
                 // 如果食材数量足够，将数量文本颜色设置为绿色，否则设置为红色
-                if (inventoryManager.inventory[recipe.ingredients[i].ingredientName] >= recipe.ingredients[i].quantityRequired)
+                if (inventoryManager.inventory[recipe.ingredients[i].commonItem] >= recipe.ingredients[i].quantityRequired)
                 {
                     ingredientsQuantityTexts[i].color = Color.green;
                 }
@@ -151,7 +156,8 @@ public class CookingManager : MonoBehaviour
             }
             else
             {
-                ingredientsTexts[i].text = recipe.ingredients[i].ingredientName;
+                ingredientsTexts[i].text = recipe.ingredients[i].commonItem.itemName;
+                ingredientsImages[i].sprite = recipe.ingredients[i].commonItem.itemImageSprite;
                 ingredientsQuantityTexts[i].text = "0/" + recipe.ingredients[i].quantityRequired.ToString();
                 ingredientsQuantityTexts[i].color = Color.red;
             }

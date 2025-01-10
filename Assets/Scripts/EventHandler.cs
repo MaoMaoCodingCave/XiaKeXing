@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Numerics;
 using UnityEngine;
 
@@ -46,6 +47,24 @@ public class EventHandler
     public static void CallOnGetAttackDirection()
     {
         OnGetAttackDirection?.Invoke();
+    }
+
+    public static event Action OnCloseMapCanvas;
+    public static void CallOnCloseMapCanvas()
+    {
+        OnCloseMapCanvas?.Invoke();
+    }
+
+    // public static event Action<float> OnDragItemEvent;
+    // public static void CallOnDragItemEvent(float weight)
+    // {
+    //     OnDragItemEvent?.Invoke(weight);
+    // }
+
+    public static event Action<int> OnDragItemFinished;
+    public static void CallOnDragItemFinished(int score)
+    {
+        OnDragItemFinished?.Invoke(score);
     }
 
 

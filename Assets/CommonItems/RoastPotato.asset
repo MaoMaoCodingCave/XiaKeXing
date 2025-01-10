@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18c0e15482fcbb488dc4f620c96ecab, type: 3}
   m_Name: RoastPotato
   m_EditorClassIdentifier: 
-  itemImageSprite: {fileID: 0}
-  itemName: 
-  itemAmount: 0
+  itemImageSprite: {fileID: 21300000, guid: 24319fffd8149b349b045648a9bc53ee, type: 3}
+  itemName: "\u70E4\u7EA2\u85AF"

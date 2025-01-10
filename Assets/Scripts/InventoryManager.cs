@@ -9,21 +9,10 @@ public class InventoryManager : MonoBehaviour
     public Canvas inventoryCanvas;
     public GameObject inventoryPanel;
     public GameObject itemPrefab;
-    public Dictionary<string, int> inventory = new Dictionary<string, int>()
-    {
-        {"面条", 5},
-        {"酱料", 2},
-        {"肉", 3},
-        {"起司", 1},
-        {"盐", 4},
-        {"花生", 3},
-        {"辣椒", 5},
-        {"苹果", 3},
-        {"桃子", 2},
-        {"红薯", 4}
-    };
+    public Dictionary<CommonItem, int> inventory = new Dictionary<CommonItem, int>();
 
     public List<CommonItem> commonItems;
+    public Sprite slotSprite;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -32,6 +21,10 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         inventoryCanvas.gameObject.SetActive(false);
+        for (int i = 0; i < commonItems.Count; i++)
+        {
+            inventory.Add(commonItems[i], 3);
+        }
     }
 
     /// <summary>
@@ -58,12 +51,15 @@ public class InventoryManager : MonoBehaviour
 
     void UpdateInventory()
     {
-        foreach (KeyValuePair<string, int> item in inventory)
+        foreach (KeyValuePair<CommonItem, int> item in inventory)
         {
             // 每一个itemPrefab都有两个Text组件，用来显示物品的名字和数量
             Text[] texts = itemPrefab.GetComponentsInChildren<Text>();
-            texts[0].text = item.Key;
+            texts[0].text = item.Key.itemName;
             texts[1].text = item.Value.ToString();
+            itemPrefab.GetComponent<Image>().sprite = slotSprite;
+            Image childImage = itemPrefab.GetComponentsInChildren<Image>()[1];
+            childImage.sprite = item.Key.itemImageSprite;
             // 如果数量为0，则不生成prefab。
             if (item.Value > 0)
             {

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enermy
+  - Hook
+  - MiningCollectItem
   layers:
   - Default
   - TransparentFX
@@ -44,6 +46,24 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2542729339
+    locked: 0
+  - name: BaseTilemap
+    uniqueID: 2263059309
+    locked: 0
+  - name: Layer01_Grass
+    uniqueID: 593715395
+    locked: 0
+  - name: Layer02_DigDirt
+    uniqueID: 3149801753
+    locked: 0
+  - name: Layer03_Water
+    uniqueID: 31409797
+    locked: 0
+  - name: Layer04_Environment
+    uniqueID: 3243583719
+    locked: 0
+  - name: Layer08_Obstacle
+    uniqueID: 135736825
     locked: 0
   - name: Player
     uniqueID: 165832403
